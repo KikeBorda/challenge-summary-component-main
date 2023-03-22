@@ -1,52 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
 
 .attribution {
-  font-size: 12px;
-  text-align: center;
-  position: fixed;
   bottom: 2px;
+  font-size: 12px;
+  position: fixed;
+  text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 body {
-  margin: 0;
+  background-color: hsl(230, 100%, 99%);
+  display: grid;
   font-family: "Hanken Grotesk";
   font-size: 18px;
   min-height: 100vh;
-  background-color: hsl(230, 100%, 99%);
+  place-items: center;
 }
 
 h2 {
-  padding-top: 5px;
   color: hsl(0, 0%, 100%);
-  letter-spacing: 0.05em;
   font-weight: 800;
+  letter-spacing: 0.05em;
+  padding-top: 5px;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1rem;
-  margin: auto;
-  margin-top: 20vh;
 }
 
 .container_result {
-  display: flex;
-  position: relative;
   align-items: center;
-  flex-direction: column;
-  margin: 0 0 auto auto;
   background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
-  width: 350px;
-  height: 500px;
   border-radius: 30px;
   color: white;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
   justify-content: space-evenly;
   left: 50px;
+  margin: 0 0 auto auto;
+  position: relative;
+  width: 350px;
+  z-index: 1;
 }
 .container_result h3 {
   color: hsl(241, 100%, 89%);
@@ -54,17 +64,17 @@ h2 {
 }
 
 .result {
-  display: flex;
-  flex-direction: column;
-  border-radius: 90%;
+  align-items: center;
   background: linear-gradient(
     to bottom,
     hsla(256, 72%, 46%, 1),
     hsla(241, 72%, 46%, 0)
   );
-  width: 200px;
+  border-radius: 90%;
+  display: flex;
+  flex-direction: column;
   height: 200px;
-  align-items: center;
+  width: 200px;
 }
 
 .result_total {
@@ -82,29 +92,29 @@ h2 {
 }
 
 .comment {
-  width: 250px;
-  text-align: center;
-  padding: 3rem auto;
   color: hsl(241, 100%, 89%);
   font-weight: 500;
+  text-align: center;
+  padding: 3rem auto;
+  width: 250px;
 }
 
 .container_summary {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  box-shadow: 5px 20px 30px 0 hsl(221, 100%, 96%);
   display: flex;
   flex-direction: column;
-  margin: auto auto auto 0;
-  background-color: hsl(0, 0%, 100%);
-  width: 400px;
   height: 500px;
-  border-radius: 30px;
+  margin: auto auto auto 0;
+  width: 400px;
   z-index: 0;
-  box-shadow: 5px 20px 30px 0 hsl(221, 100%, 96%);
 }
 
 .container_summary h3 {
   color: hsl(224, 30%, 27%);
-  font-weight: 800;
   font-size: 23px;
+  font-weight: 800;
 }
 
 .container_summary h3,
@@ -115,12 +125,12 @@ h2 {
 }
 
 .item {
-  display: flex;
   align-items: center;
   border-radius: 10px;
-  padding: 15px 0;
-  margin: 15px 0;
+  display: flex;
   font-weight: 600;
+  margin: 15px 0;
+  padding: 15px 0;
 }
 
 .item p {
@@ -133,28 +143,28 @@ h2 {
 }
 
 .container_summary_reaction {
-  color: hsl(0, 100%, 67%);
   background-color: hsla(0, 100%, 67%, 5%);
+  color: hsl(0, 100%, 67%);
 }
 
 .container_summary_memory {
-  color: hsl(39, 100%, 56%);
   background-color: hsla(39, 100%, 56%, 5%);
+  color: hsl(39, 100%, 56%);
 }
 
 .container_summary_verbal {
-  color: hsl(166, 100%, 37%);
   background-color: hsla(166, 100%, 37%, 5%);
+  color: hsl(166, 100%, 37%);
 }
 
 .container_summary_visual {
-  color: hsl(234, 85%, 45%);
   background-color: hsla(234, 85%, 45%, 5%);
+  color: hsl(234, 85%, 45%);
 }
 
 .container_summary mark {
-  background: none;
   color: hsl(224, 30%, 27%);
+  background: none;
   font-weight: 800;
 }
 
@@ -169,15 +179,15 @@ figure {
 }
 
 button {
-  background-color: hsl(224, 30%, 27%);
   color: hsl(0, 0%, 100%);
-  border-radius: 30px;
-  width: auto;
-  height: 55px;
-  margin-top: 30px;
+  background-color: hsl(224, 30%, 27%);
   border: 0 solid hsl(224, 30%, 27%);
+  border-radius: 30px;
   font-size: 16px;
   font-weight: 700;
+  height: 55px;
+  margin-top: 30px;
+  width: auto;
 }
 
 button:hover,
@@ -194,16 +204,16 @@ button:active {
   }
   .container_result {
     border-radius: 0 0 30px 30px;
+    height: 450px;
     left: 0;
     margin: 0;
     width: 100%;
-    height: 450px;
   }
   .container_summary {
-    width: 100%;
     border-radius: 0;
     height: 600px;
     margin-top: -20px;
+    width: 100%;
   }
   .container_summary h3,
   .container_summary aside,
